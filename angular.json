@@ -1,6 +1,77 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "newProjectRoot": "projects",
-  "projects": {}
+  "newProjectRoot": "./",
+  "projects": {
+    "seang-label2": {
+      "projectType": "library",
+      "root": "seang-label2",
+      "sourceRoot": "seang-label2/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "seang-label2/tsconfig.lib.json",
+            "project": "seang-label2/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "seang-label2/src/test.ts",
+            "tsConfig": "seang-label2/tsconfig.spec.json",
+            "karmaConfig": "seang-label2/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "seang-label2/tsconfig.lib.json",
+              "seang-label2/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "seang-label": {
+      "projectType": "library",
+      "root": "seang-label",
+      "sourceRoot": "seang-label/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "seang-label/tsconfig.lib.json",
+            "project": "seang-label/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "seang-label/src/test.ts",
+            "tsConfig": "seang-label/tsconfig.spec.json",
+            "karmaConfig": "seang-label/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "seang-label/tsconfig.lib.json",
+              "seang-label/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }},
+  "defaultProject": "seang-label"
 }

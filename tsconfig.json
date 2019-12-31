@@ -17,7 +17,23 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "seang-label": [
+        "dist/seang-label",
+        "dist/seang-label"
+      ],
+      "seang-label/*": [
+        "dist/seang-label/*",
+        "dist/seang-label/*"
+      ],
+      "seang-label2": [
+        "dist/seang-label2"
+      ],
+      "seang-label2/*": [
+        "dist/seang-label2/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
